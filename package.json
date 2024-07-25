@@ -4,8 +4,8 @@
   "description": "Web API to create cinema and purchase seats in different cinemas",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "SET NODE_ENV=development&& nodemon server.js",
+    "test": "SET NODE_ENV=test&& mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -25,9 +25,15 @@
     "express-rate-limit": "^7.1.1",
     "helmet": "^7.0.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^7.6.1",
+    "mongoose": "^8.5.1",
     "morgan": "^1.10.0",
     "validator": "^13.11.0",
     "xss-clean": "^0.1.4"
+  },
+  "devDependencies": {
+    "chai": "^4.4.1",
+    "chai-http": "^4.3.0",
+    "mocha": "^10.6.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }

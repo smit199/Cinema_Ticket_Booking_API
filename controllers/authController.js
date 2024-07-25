@@ -13,8 +13,12 @@ exports.signupUser = catchAsyncErrors(async (req, res, next) => {
     if(!req.body.confirmPassword)   throw new AppError('Please confirm password', 400);
 
     if(req.body.password !== req.body.confirmPassword)  throw new AppError('Password and confirm password do not match', 400);
-
-    const newUser = await userModel.create(req.body);
+    const user = {
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password, 
+    };
+    const newUser = await userModel.create(user);
     const token = await generateToken(newUser._id);
 
     res.status(201).json({

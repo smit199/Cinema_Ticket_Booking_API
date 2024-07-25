@@ -7,12 +7,15 @@ process.on('uncaughtException', err => {
     process.exit(1);
 });
 
-dotenv.config({path: './config.env'});
-mongoose.connect(process.env.DATABASE).then(() => console.log('connected with database'));
+dotenv.config({path: './config/.env'});
+dotenv.config({path: `./config/.env.${process.env.NODE_ENV}`});
+mongoose.connect(process.env.DATABASE);
 
 const server = app.listen(process.env.PORT, () => {
     console.log(`Application is running on port ${process.env.PORT}`);
 });
+
+module.exports = server;
 
 // To globally handle any unhandled or rejected promises error
 process.on('unhandledRejection', err => {
