@@ -41,11 +41,13 @@ Follow these steps to set up and run the API on your local machine:
 
 4. **Setting Enviroment Variables**
 
-    Create config.env file in your root directory and add following environment variables:
+    Create three files .env, .env.development and .env.test inside config folder in your root directory. store following common enviroment variables in .env file:
     - PORT: Port in which to run application
-    - DATABASE: MongoDB database connection url
     - JWT_SECRET: jwt secret key string
     - JWT_EXPIRE_TIME: expiration time of jwt token (ex. 7d, 2h, 5m)
+
+    Store database url of development and test database in separate env file as below:
+    - DATABASE: MongoDB database connection url
     
 5. **Run Application**
 
