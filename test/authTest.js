@@ -7,18 +7,27 @@ const userModel = require('./../models/userModel');
 chai.should();
 chai.use(chaiHttp);
 
+// afterEach(function() {
+//     addContext(this, {
+//         title: 'Response Body',
+//         value: util.inspect(response.body)
+//     });
+// });
+
 describe('/Auth test', () => {
 
-    beforeEach(done => {
-        console.log('hello');
-        userModel.deleteMany({});
-        done();
-    });
+    // beforeEach(done => {
+    //     console.log('hello');
+    //     userModel.deleteMany({});
+    //     done();
+    // });
     
-    afterEach(done => {
-        console.log('hello');
-        userModel.deleteMany({});
-        done();
+    afterEach(async () => {
+        try {
+            await userModel.deleteMany({});
+        } catch (error) {
+            console.log(error);
+        }
     });
 
     it('it should not create user without name', (done) => {
