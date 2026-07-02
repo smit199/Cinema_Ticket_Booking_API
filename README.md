@@ -1,4 +1,4 @@
-# Cinema Ticket Purchase Platform Web API - Nodejs and MongoDB
+# Cinema Ticket Booking Platform API - Nodejs and MongoDB
 
 This is a REST API for cinema ticket booking platform to manage booking of cinema tickets using Nodejs, Expressjs and MongoDB. This API allows to perform following operations:
 
