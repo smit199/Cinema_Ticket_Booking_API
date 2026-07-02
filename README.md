@@ -1,6 +1,6 @@
 # Cinema Ticket Purchase Platform Web API - Nodejs and MongoDB
 
-This is a RESTful web API for cinema ticket purchase platform to manage booking of cinema tickets using Nodejs, Expressjs and MongoDB. This API allows to perform following operations:
+This is a REST API for cinema ticket booking platform to manage booking of cinema tickets using Nodejs, Expressjs and MongoDB. This API allows to perform following operations:
 
 - Create a cinema with N seats. Returns the cinema ID.
 
@@ -8,9 +8,9 @@ This is a RESTful web API for cinema ticket purchase platform to manage booking 
 
 - Registration and login of user with jwt token to purchase ticket.
 
-- Purchase a specific seat number in cinema C. If the seat is already purchased, return an error, otherwise return the seat and booking details.
+- Book a specific seat number in cinema C. If the seat is already booked, return an error, otherwise return the seat and booking details.
 
-- Purchase the first two free consecutive seats in cinema C. If there are no two consecutive seats available, return an error, otherwise return the list of seats and booking details.
+- Book the first two free consecutive seats in cinema C. If there are no two consecutive seats available, return an error, otherwise return the list of seats and booking details.
 
 - Additionally, API provide the features of sorting, searching by cinema name and pagination.
 
